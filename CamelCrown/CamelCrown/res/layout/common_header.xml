@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ActionBar"
+    android:baselineAligned="false"
+    android:focusable="true" >
+
+    <LinearLayout
+        android:id="@+id/header_layout_leftview_container"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_layout_middleview_container"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/header_htv_subtitle"
+            style="@style/ActionBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/header_htv_subtitle_icon"
+            style="@style/ActionBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/history_pull_down_data"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/header_layout_middleview_containers"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_header_centre_ll"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_left_header_layout_middleview_containers"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/commom_header_center_left_bg"
+                android:textColor="@drawable/commom_header_center_text_color"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_right_header_layout_middleview_containers"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/commom_header_center_right_bg"
+                android:textColor="@drawable/commom_header_center_text_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_layout_rightview_container"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f2" >
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+    
+    <RelativeLayout
+        android:id="@+id/rl_import_identify_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_import_identify_next"
+        android:layout_below="@+id/common_actionbar"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_import_identify_icon"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_above="@+id/edt_import_identify"
+            android:layout_alignParentTop="true"
+            android:padding="20dp"
+            android:src="@drawable/import_id_bg" />
+
+        <com.camel.redpenguin.view.DeletableEditText
+            android:id="@+id/edt_import_identify"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/iv_import_identify_icon"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/selector_edittext_next"
+            android:ems="10" 
+            android:drawableLeft="@drawable/user_account"
+            android:drawableRight="@drawable/user_delete"
+            android:hint="手动输入序列号"
+            android:inputType="number" >
+            <requestFocus />
+        </com.camel.redpenguin.view.DeletableEditText>
+
+
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/tv_import_identify_next"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/selector_logout"
+        android:gravity="center"
+        android:paddingBottom="12dip"
+        android:paddingTop="12dip"
+        android:text="下一步" 
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

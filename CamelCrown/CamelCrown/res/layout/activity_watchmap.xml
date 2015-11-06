@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <RelativeLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:background="#03a9f4"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_search_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/base_action_bar_back_bg_selector" />
+        <ImageView
+            android:id="@+id/img_search_save"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/base_action_bar_true_bg_selector" />
+
+        <EditText
+            android:id="@+id/ev_search_comment"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_search_save"
+            android:layout_toRightOf="@+id/img_search_back"
+            android:ems="10" 
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_edit_search"
+            android:textColor="#ffffff">
+
+            
+        </EditText>
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_watch_map_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_watch_map_message"
+        android:layout_below="@+id/common_actionbar" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/mv_map_watch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:alpha="255"
+            android:cacheColorHint="#00000000"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/rl_watch_map_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:background="@drawable/main_display_info"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_watch_map_search"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/main_user_search" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_watch_map_clear"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rl_watch_map_search"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:background="@drawable/main_display_info"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_watch_map_clear"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/main_user_clear" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_watch_map_location"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/rl_watch_map_clear"
+            android:layout_below="@+id/rl_watch_map_clear"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:background="@drawable/main_display_info"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_watch_map_location"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/main_user_location" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_watch_map_display"
+        android:background="#eeeeee" />
+
+    <LinearLayout
+        android:id="@+id/ll_watch_map_message"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/rl_watch_map_message_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/tv_watch_map_message_name"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="名称 "
+                android:textColor="#929292"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_watch_map_message_name_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/tv_watch_map_message_name"
+                android:gravity="center|left"
+                android:text="科苑路-XX大厦"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#eeeeee" />
+
+        <RelativeLayout
+            android:id="@+id/rl_watch_map_message_scope"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/tv_watch_map_message_scope"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="范围 "
+                android:textColor="#929292"
+                android:textSize="20sp" />
+
+            <SeekBar
+                android:id="@+id/sb_bar_scope"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_watch_map_message_scope"
+                android:focusable="true"
+                android:max="400"
+                android:maxHeight="4.0dip"
+                android:minHeight="4.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:progressDrawable="@drawable/seek_bar_selector"
+                android:thumb="@drawable/seek_bar_thumb" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#eeeeee" />
+
+        <RelativeLayout
+            android:id="@+id/rl_watch_map_message_sign"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/tv_watch_map_message_sign"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="标志 "
+                android:textColor="#929292"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_watch_map_message_sign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/tv_watch_map_message_sign"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/img_watch_map_message_sign_home"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/selector_area_home" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/img_watch_map_message_sign_school"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/selector_area_school" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/img_watch_map_message_sign_game"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/selector_area_game" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/img_watch_map_message_sign_collect"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/selector_area_collect" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

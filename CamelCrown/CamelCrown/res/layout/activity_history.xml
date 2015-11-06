@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <com.camel.redpenguin.view.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_actionbar"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="8dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true" />
+
+    <ProgressBar
+        android:id="@+id/pull_refresh_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@anim/pull2refresh_loading"
+        android:visibility="gone" />
+
+    <ImageView 
+        android:id="@+id/iv_history_date"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/top_bar" 
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_date" 
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"/>
+</RelativeLayout>

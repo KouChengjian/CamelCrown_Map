@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" 
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/rl_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dip" >
+
+        <ImageView
+            android:id="@+id/img_history_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/default_head" />
+
+        <RelativeLayout
+            android:id="@+id/ll_history_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/img_history_icon"
+            android:layout_alignTop="@id/img_history_icon"
+            android:layout_marginLeft="8dip"
+            android:layout_toRightOf="@id/img_history_icon" 
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/tv_history_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="深南大道"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_history_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tv_history_address"
+                android:paddingTop="2dp"
+                android:text="9:45-12:30        2小时45分钟"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View 
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f7f7f7"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/rl_history"/>
+
+</RelativeLayout>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_device_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_actionbar"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_device_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/tv_device_icon"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="头像" />
+
+            <ImageView
+                android:id="@+id/iv_device_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#eeeeee"
+                android:scaleType="centerInside"
+                android:src="@drawable/default_head" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="名称" />
+
+            <TextView
+                android:id="@+id/tv_device_name_content"
+                style="@style/TextTheme.tipstheme_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_device_name"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" />
+
+            <ImageView
+                android:id="@+id/iv_device_name"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_more" />
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/rl_device_tdcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:id="@+id/tv_device_tdcode"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="二维码" />
+
+            <TextView
+                android:id="@+id/tv_device_tdcode_content"
+                style="@style/TextTheme.tipstheme_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_device_tdcode"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" 
+                android:background="@drawable/conversation_options_qr"/>
+
+            <ImageView
+                android:id="@+id/iv_device_tdcode"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_more" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" 
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_device_birthday"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="生日" />
+
+            <TextView
+                android:id="@+id/tv_device_birthday_content"
+                style="@style/TextTheme.tipstheme_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_device_birthday"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" />
+
+            <ImageView
+                android:id="@+id/iv_device_birthday"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_more" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_device_sex"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="性别" />
+
+            <CheckBox
+                android:id="@+id/cb_device_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@drawable/selector_sex_choice"
+                android:checked="true"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" 
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_device_stature"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="身高" />
+
+            <TextView
+                android:id="@+id/tv_device_stature_content"
+                style="@style/TextTheme.tipstheme_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_device_stature"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" />
+
+            <ImageView
+                android:id="@+id/iv_device_stature"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_more" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_stature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" 
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_device_weight"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="体重" />
+
+            <TextView
+                android:id="@+id/tv_device_weight_content"
+                style="@style/TextTheme.tipstheme_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_device_weight"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" />
+
+            <ImageView
+                android:id="@+id/iv_device_weight"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_more" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_grade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_device_bg"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" 
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_device_grade"
+                style="@style/TextTheme.tipstheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
+                android:text="年级" />
+
+            <TextView
+                android:id="@+id/tv_device_grade_content"
+                style="@style/TextTheme.tipstheme_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/iv_device_grade"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" />
+
+            <ImageView
+                android:id="@+id/iv_device_grade"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_more" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#eeeeee" />
+        
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_device_cancel_attention"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/selector_logout"
+        android:gravity="center"
+        android:paddingBottom="12dip"
+        android:paddingTop="12dip"
+        android:text="取消关注"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

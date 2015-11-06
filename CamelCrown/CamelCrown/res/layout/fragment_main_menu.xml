@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_menu_header"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal"
+            android:padding="10dp" 
+            android:background="#468fdd">
+
+            <RelativeLayout
+                android:id="@+id/ll_menu_header_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp" >
+
+                <com.camel.redpenguin.view.CircleImageView
+                    android:id="@+id/img_menu_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/default_head" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_menu_header_info"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp" >
+
+                <TextView
+                    android:id="@+id/tv_menu_header_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无设备"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看详情"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_menu_devices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_menu_set"
+        android:layout_below="@+id/ll_menu"
+        android:divider="@null"  
+        android:background="#edeef0">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/ll_menu_set"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_menu_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_logout"
+                android:drawableTop="@null"
+                android:paddingBottom="2dip"
+                android:paddingTop="2dip"
+                android:scaleType="matrix"
+                android:text="设置"
+                android:textColor="#ffffff"
+                android:textSize="16sp" 
+                android:layout_margin="2dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_menu_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_logout"
+                android:drawableTop="@null"
+                android:paddingBottom="2dip"
+                android:paddingTop="2dip"
+                android:scaleType="matrix"
+                android:text="反馈"
+                android:textColor="#ffffff"
+                android:textSize="16sp" 
+                android:layout_margin="2dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

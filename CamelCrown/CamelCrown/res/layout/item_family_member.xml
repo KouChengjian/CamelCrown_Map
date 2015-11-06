@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <RelativeLayout
+            android:id="@+id/rl_family_member"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#ffffff"
+            android:layout_margin="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/rl_family_member_icon"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/iv_family_member_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/head_default_local" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_family_member_content"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_toRightOf="@+id/rl_family_member_icon"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_family_member_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_family_member_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:gravity="center|left"
+                        android:text="设备的爸爸"
+                        android:textColor="#404040"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_family_member_administrator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignTop="@+id/tv_family_member_nick"
+                        android:layout_toRightOf="@+id/tv_family_member_nick"
+                        android:gravity="center|left"
+                        android:text="管理员"
+                        android:textColor="#ffffff"
+                        android:background="#03a9f4"
+                        android:textSize="15sp" 
+                        android:layout_margin="3dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_family_member_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
+
+                    <TextView
+                        android:id="@+id/tv_family_member_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="18710627436"
+                        android:gravity="center|top|left"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+</RelativeLayout>

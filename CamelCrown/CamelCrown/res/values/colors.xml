@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="base_color_text_white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_listitem_press">#ffd0dce4</color>
+    
+    <!-- header -->
+    <color name="header_center_left_text_white">#3bc4f7</color>
+    <color name="header_center_left_text_blue">#13a2d7</color>
+    
+    <color name="black">#ff000000</color>
+    
+    <drawable name="transparent">@color/transparent</drawable>
+</resources>

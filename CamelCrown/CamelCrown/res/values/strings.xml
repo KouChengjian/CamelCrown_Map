@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">骆驼守护星</string>
+    
+    
+    <!-- popup -->
+    <string name="main_popup_history">历史位置</string>
+    <string name="main_popup_message">定位模式</string>
+    <string name="main_popup_safetyarea">远程守护</string>
+    <string name="main_popup_family">消息中心</string>
+    <!-- 设置 -->
+    <string name="setting_offline">离线地图</string>
+    
+    <!-- sliding drawer -->
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    
+    <string name="location_model_safety">每次定位间隔大约在一分钟到五分钟之间，手表可以使用一天。</string>
+    <string name="location_model_economize">每次定位间隔大约在两分钟到十分钟之间，手表可以使用两天。</string>
+    <string name="location_model_urgency">紧急情况下进行强制定位，非常的耗电。</string>
+    
+    
+    <string name="toast_error_password_null">密码不能为空</string>
+    <string name="toast_error_username_null">用户名不能为空</string>
+</resources>

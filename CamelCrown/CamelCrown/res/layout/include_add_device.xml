@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/add_device_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="二维码"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/layout_code"
+        android:background="@drawable/base_horizontal_line" >
+    </View>
+
+    <LinearLayout
+        android:id="@+id/layout_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_code"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:layout_width="1dip"
+            android:layout_height="50.0dip"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:singleLine="true"
+            android:gravity="center"
+            android:text="+"
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:background="#d1d7e2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_add"
+        android:background="#eeeeee" />
+
+</RelativeLayout>

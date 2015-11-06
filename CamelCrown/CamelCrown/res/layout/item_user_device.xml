@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/rl_device_"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+         >
+
+        <RelativeLayout
+            android:id="@+id/rl_device_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/img_device_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/default_head" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_device_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/rl_track_safety_select"
+            android:layout_toRightOf="@+id/rl_device_avatar"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:textColor="#404040"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_device_select"
+            android:layout_width="40dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="3dp" 
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/btn_device_select"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_btn_track" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_below="@+id/rl_device_"
+        android:background="#eeeeee"/>
+
+</RelativeLayout>

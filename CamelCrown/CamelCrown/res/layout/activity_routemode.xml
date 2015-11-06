@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edeef0"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_route_mode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/common_actionbar"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_route_mode_walk"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#ffffff" >
+
+            <RelativeLayout
+                android:id="@+id/rl_route_mode_walk_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_route_mode_walk_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/track_model_safety" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_route_mode_walk_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/rl_route_mode_walk_select"
+                android:layout_toRightOf="@+id/rl_route_mode_walk_icon"
+                android:gravity="center|left"
+                android:text="步行"
+                android:textColor="#404040"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_route_mode_walk_select"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/btn_route_mode_walk_select"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_btn_track" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_route_mode_drive"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/rl_route_mode_drive_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_route_mode_drive_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/track_model_safety" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_route_mode_drive_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/rl_route_mode_drive_select"
+                android:layout_toRightOf="@+id/rl_route_mode_drive_icon"
+                android:gravity="center|left"
+                android:text="驾车"
+                android:textColor="#404040"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_route_mode_drive_select"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/btn_route_mode_drive_select"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_btn_track" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_route_mode_bus"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#ffffff" 
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_route_mode_bus_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_route_mode_bus_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/track_model_safety" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_route_mode_bus_content"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/rl_route_mode_bus_select"
+                android:layout_toRightOf="@+id/rl_route_mode_bus_icon"
+                android:gravity="center|left"
+                android:text="公交"
+                android:textColor="#404040"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_route_mode_bus_select"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:padding="3dp" >
+
+                <Button
+                    android:id="@+id/btn_route_mode_bus_select"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_btn_track" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

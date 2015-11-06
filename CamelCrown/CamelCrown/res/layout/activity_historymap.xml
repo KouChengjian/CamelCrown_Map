@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mv_map_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_map_history_control"
+        android:layout_below="@+id/common_actionbar"
+        android:layout_gravity="center_vertical"
+        android:alpha="255"
+        android:cacheColorHint="#00000000"
+        android:clickable="true" />
+
+    <RelativeLayout
+        android:id="@+id/rl_map_history_control"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" 
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/pre"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/btn_history_pre"
+            android:onClick="nodeClick" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/pre"
+            android:background="@drawable/btn_history_next"
+            android:onClick="nodeClick" />
+
+        <TextView
+            android:id="@+id/tv_map_step"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/next"
+            android:layout_toRightOf="@+id/pre" 
+            android:drawableLeft="@drawable/btn_history_left_step"
+            android:drawableRight="@drawable/btn_history_right_step"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:text="-  -"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

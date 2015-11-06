@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ViewFlipper
+                android:id="@+id/reg_vf_viewflipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:flipInterval="1000"
+                android:persistentDrawingCache="animation" >
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    layout="@layout/include_register_phone" />
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    layout="@layout/include_register_verify" />
+                <include
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    layout="@layout/include_register_setpwd" />
+            </ViewFlipper>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#edeef0"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="4dip" >
+
+            <Button
+                android:id="@+id/reg_btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="42dip"
+                android:layout_marginRight="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_logout"
+                android:gravity="center"
+                android:textColor="@drawable/selector_register_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/reg_btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="42dip"
+                android:layout_marginLeft="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/selector_logout"
+                android:gravity="center"
+                android:textColor="@drawable/selector_register_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loading"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@null" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/welcome_linear_ctrlbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal|bottom"
+        android:orientation="vertical"
+        android:paddingBottom="15dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:paddingTop="13dip" 
+        android:background="@drawable/loading_init_bg"
+        android:visibility="gone">
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/welcome_btn_register"
+                android:layout_width="120dip"
+                android:layout_height="40dip"
+                android:layout_margin="10dip"
+                android:background="@drawable/btn_selector_control"
+                android:text="注册"
+                android:textColor="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/welcome_btn_login"
+                android:layout_width="120dip"
+                android:layout_height="40dip"
+                android:layout_margin="10dip"
+                android:background="@drawable/btn_selector_control"
+                android:text="登录"
+                android:textColor="#FFFFFFFF" />
+            </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

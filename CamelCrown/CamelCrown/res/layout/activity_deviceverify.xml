@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_add_device_verify_again"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/selector_logout"
+        android:gravity="center"
+        android:paddingBottom="12dip"
+        android:paddingTop="12dip"
+        android:text="确定"
+        android:textColor="#ffffff" />
+
+    <include
+        android:id="@+id/common_actionbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_action_bar" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/tv_add_device_verify_again"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/common_actionbar"
+        layout="@layout/include_register_verify" />
+
+</RelativeLayout>

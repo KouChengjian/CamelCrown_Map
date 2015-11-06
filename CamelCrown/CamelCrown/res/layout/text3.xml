@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+        
+        <ImageView 
+            android:id="@+id/img_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logo"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_rv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/img_icon" 
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/tv_rv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:text=""
+                android:gravity="center"
+                android:textSize="22sp" />
+
+            <TextView 
+                android:id="@+id/tv_rv_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_below="@+id/tv_rv_text"
+                android:text="位置: 深圳市科苑路"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+            
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="haha" 
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb_rv"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/ll_rv_text_1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/ll_rv_text"
+            android:padding="2dp"
+            android:visibility="gone" >
+            <ImageView 
+            android:id="@+id/img_icon_2"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/img_icon_1"
+            android:background="@drawable/ic_launcher"
+            android:layout_marginTop="2dp"/>
+
+            <ImageView
+                android:id="@+id/img_icon_1"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignLeft="@+id/img_icon_2"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/ic_launcher" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
